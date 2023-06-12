@@ -1,5 +1,6 @@
 <script>
 	import Button from '../../../shared/ui/button';
+	import IconPlus from '../../../shared/ui/icon-plus';
 	import { sortCoffeeApi } from '../../../shared/api/sort-coffee';
 	import { catalogStore } from '../../../app/store/catalog';
 
@@ -21,7 +22,7 @@
 		class="add-button {(isLoading && 'add-button--loading') || ''}"
 		on:click={() => getSortCoffee()}
 	>
-		+
+		<IconPlus />
 	</Button>
 </div>
 
@@ -31,28 +32,16 @@
 			padding: 40px;
 
 			& :global(.add-button) {
-				cursor: pointer;
-				font-size: 55px;
-				color: white;
-				border-radius: 50%;
-				background-color: red;
-				width: 40px;
-				height: 40px;
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				width: 60px;
+				height: 60px;
 				transition: 200ms;
 			}
 		}
 
-		&__container :global(.add-button:hover) {
-			transform: rotate(90deg);
-			background-color: #9d0c0c;
-		}
-
 		&__container :global(.add-button--loading) {
-			pointer-events: none;
 			opacity: 0.3;
+			pointer-events: none;
+			transform: rotate(90deg);
 		}
 	}
 </style>
