@@ -8,9 +8,10 @@
 	let productList: HTMLDivElement;
 
 	function updateScrollPosition() {
+		const clientRects = productList.getClientRects();
 		if (document.body.scrollWidth < productList.scrollWidth) {
 			productList.scrollTo({
-				left: productList.scrollWidth - document.body.scrollWidth,
+				left: productList.scrollWidth - document.body.scrollWidth + clientRects.item(0).x * 2,
 				behavior: 'smooth',
 				top: 0
 			});
@@ -30,6 +31,7 @@
 
 <style lang="less">
 	.product-list {
+		margin: 15px;
 		display: flex;
 		gap: 15px;
 		overflow-x: scroll;
@@ -38,8 +40,8 @@
 		padding: 10px;
 
 		&::-webkit-scrollbar {
-			 height: 20px;
-		 }
+			height: 20px;
+		}
 
 		&::-webkit-scrollbar-track {
 			background-color: transparent;

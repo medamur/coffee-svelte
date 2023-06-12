@@ -29,7 +29,7 @@
 <style lang="less">
 	.add-button {
 		&__container {
-			padding: 40px;
+			padding: 20px;
 
 			& :global(.add-button) {
 				width: 60px;
