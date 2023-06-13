@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { sortsCoffeeApiTypes } from '../../../shared/api/sort-coffee';
-	import Img from '../../../shared/ui/img';
-	import Label from '../../../shared/ui/label';
+	import type { sortsCoffeeApiTypes } from '@shared/api/sort-coffee';
+	import Label from '@shared/ui/label';
+	import Img from '@shared/ui/img';
 
 	export let product: sortsCoffeeApiTypes.SortCoffee;
 

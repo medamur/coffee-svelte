@@ -1,8 +1,8 @@
 <script>
-	import Button from '../../../shared/ui/button';
-	import IconPlus from '../../../shared/ui/icon-plus';
-	import { sortCoffeeApi } from '../../../shared/api/sort-coffee';
-	import { catalogStore } from '../../../app/store/catalog';
+	import Button from '@shared/ui/button';
+	import IconPlus from '@shared/ui/icon-plus';
+	import { catalogStore } from '@store/catalog';
+	import { sortCoffeeApi } from '@shared/api/sort-coffee';
 
 	let isLoading = false;
 

@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { ProductCardLoad } from './features/catalog';
-	import ProductList from './components/catalog/product-list';
 	import { onDestroy, onMount } from 'svelte';
-	import { sortCoffeeApi } from './shared/api/sort-coffee';
-	import { catalogStore } from './app/store/catalog';
-	import('./shared/styles/index.less');
+	import { ProductCardLoad } from '@features/catalog';
+	import ProductList from '@components/catalog/product-list';
+	import { sortCoffeeApi } from '@shared/api/sort-coffee';
+	import { catalogStore } from '@store/catalog';
+	import('@shared/styles/index.less');
 
 	let scheduledAddingSortCoffee;
 	let productCount = $catalogStore.length;

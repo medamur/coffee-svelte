@@ -17,7 +17,14 @@
 			"svelte/transition",
 			"svelte/animate",
 			"svelte/easing"
-		]
+		],
+		"paths": {
+			"@components/*": ["components/*"],
+			"@features/*": ["features/*"],
+			"@shared/*": ["shared/*"],
+			"@store/*": ["app/store/*"],
+			"@app/*": ["app/*"]
+		},
 	},
 
 	// Fixes errors when changing `module` to ES in the above compiler options
