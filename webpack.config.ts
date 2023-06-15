@@ -103,7 +103,6 @@ const config: Configuration = {
 							optimistic: true,
 						},
 						preprocess: SveltePreprocess({
-							scss: true,
 							less: true,
 							postcss: {
 								plugins: [
@@ -236,7 +235,7 @@ if ('compilerOptions' in tsconfig && 'paths' in tsconfig.compilerOptions) {
 	const aliases = tsconfig.compilerOptions.paths;
 
 	for (const alias in aliases) {
-		const paths = aliases[alias].map((p: string) => path.resolve(__dirname, p));
+		const paths = aliases[alias].map((p: string) => path.resolve(__dirname, 'src/' + p));
 
 		// Our tsconfig uses glob path formats, whereas webpack just wants directories
 		// We'll need to transform the glob format into a format acceptable to webpack

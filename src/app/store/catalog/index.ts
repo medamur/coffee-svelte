@@ -1,5 +1,5 @@
 import { type Readable, writable } from 'svelte/store';
-import type { sortsCoffeeApiTypes } from '../../../shared/api/sort-coffee';
+import type { sortsCoffeeApiTypes } from '@shared/api/sort-coffee';
 
 interface Catalog extends Readable<sortsCoffeeApiTypes.SortCoffee[]> {
 	push: (sortCoffee: sortsCoffeeApiTypes.SortCoffee) => void;

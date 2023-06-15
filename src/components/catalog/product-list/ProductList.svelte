@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { sortsCoffeeApiTypes } from '../../../shared/api/sort-coffee';
-	import ProductCard from '../product-card';
 	import { afterUpdate } from 'svelte';
+	import ProductCard from '../product-card';
+	import type { sortsCoffeeApiTypes } from '@shared/api/sort-coffee';
 
 	export let products: sortsCoffeeApiTypes.SortCoffee[] | [] = [];
 

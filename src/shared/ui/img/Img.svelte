@@ -12,7 +12,9 @@
 
 <div class="img__container {(isLoadedImg && 'img__container--hide-bg') || ''}">
 	{#if imgInfo.watermark}
-		<span class="img__watermark">{imgInfo.watermark}</span>
+		<span class="img__watermark {(isLoadedImg && 'img__watermark--show') || ''}">
+			{imgInfo.watermark}
+		</span>
 	{/if}
 
 	<img
@@ -44,7 +46,7 @@
 			border-radius: 3px 3px 0 0;
 			overflow: hidden;
 			background: #f6f7f8
-			linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%) no-repeat;
+				linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%) no-repeat;
 			background-size: 400px 300px;
 			-webkit-animation-duration: 1s;
 			animation-duration: 1s;
@@ -80,6 +82,12 @@
 			font-size: 20px;
 			color: white;
 			pointer-events: none;
+			transition: 400ms;
+			opacity: 0;
+
+			&--show {
+				opacity: 1;
+			}
 		}
 	}
 </style>
